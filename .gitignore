@@ -75,3 +75,4 @@ crashlytics-build.properties
 
 # Large files
 /Assets/StreamingAssets/positions.json
+/Assets/Models/redbullring-opt.glb
