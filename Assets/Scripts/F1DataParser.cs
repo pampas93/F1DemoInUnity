@@ -64,6 +64,7 @@ public class F1DataParser : MonoBehaviour
         public List<F1Frame> f1Data;
     }
 
+    // Returns <frame, <driver_num, position>>
     public Dictionary<int, Dictionary<int, Vector3>> LoadF1Data()
     {
         parsedData = new Dictionary<int, Dictionary<int, Vector3>>();
@@ -110,19 +111,18 @@ public class F1DataParser : MonoBehaviour
                         parsedData[i] = carPositions;
                     }
                     
-                    // Example of accessing the data
-                    if (parsedData.Count > 0)
-                    {
-                        var firstFrame = parsedData[0];
-                        // Debug.Log($"First frame has {firstFrame.Count} cars");
+                    // if (parsedData.Count > 0)
+                    // {
+                    //     var firstFrame = parsedData[0];
+                    //     // Debug.Log($"First frame has {firstFrame.Count} cars");
                         
-                        foreach (var driver in firstFrame.Keys)
-                        {
-                            string driverCode = driverNumMap.ContainsKey(driver) ? driverNumMap[driver] : driver.ToString();
-                            Vector3 position = firstFrame[driver];
-                            // Debug.Log($"Driver {driverCode} (#{driver}) position: {position}");
-                        }
-                    }
+                    //     foreach (var driver in firstFrame.Keys)
+                    //     {
+                    //         string driverCode = driverNumMap.ContainsKey(driver) ? driverNumMap[driver] : driver.ToString();
+                    //         Vector3 position = firstFrame[driver];
+                    //         // Debug.Log($"Driver {driverCode} (#{driver}) position: {position}");
+                    //     }
+                    // }
                 }
                 else
                 {
@@ -142,21 +142,5 @@ public class F1DataParser : MonoBehaviour
         }
         
         return new Dictionary<int, Dictionary<int, Vector3>>();
-    }
-
-    // Public method to access the parsed data from other scripts
-    public Dictionary<int, Dictionary<int, Vector3>> GetParsedData()
-    {
-        return parsedData;
-    }
-
-    // Public method to get driver positions at a specific frame
-    public Dictionary<int, Vector3> GetFrameData(int frameIndex)
-    {
-        if (parsedData != null && parsedData.ContainsKey(frameIndex))
-        {
-            return parsedData[frameIndex];
-        }
-        return new Dictionary<int, Vector3>();
     }
 }
