@@ -37,11 +37,6 @@ public class F1DataParser : MonoBehaviour
     // This will store our parsed data: frame index -> (driver number -> position)
     private Dictionary<int, Dictionary<int, Vector3>> parsedData;
 
-    void Start()
-    {
-        LoadF1Data();
-    }
-
     [System.Serializable]
     public class CarPosition
     {

@@ -91,7 +91,7 @@ public class RaceVisualizerWithUpdate : MonoBehaviour
             
         Dictionary<int, Vector3> frameData = raceData[frameIndex];
         
-        Debug.Log($"Frame {frameIndex} of {totalFrames - 1} (Time: {elapsedTime:F3}s):");
+        // Debug.Log($"Frame {frameIndex} of {totalFrames - 1} (Time: {elapsedTime:F3}s):");
         
         foreach (var carEntry in frameData)
         {
@@ -103,7 +103,7 @@ public class RaceVisualizerWithUpdate : MonoBehaviour
                 : carNumber.ToString();
             
             // Log car position
-            Debug.Log($"  Car #{carNumber} ({driverCode}) - Position: {position}");
+            // Debug.Log($"  Car #{carNumber} ({driverCode}) - Position: {position}");
             
             // UpdateCarPosition(carNumber, position);
         }

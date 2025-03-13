@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 732491690}
   - component: {fileID: 732491691}
   - component: {fileID: 732491692}
+  - component: {fileID: 732491693}
   m_Layer: 0
   m_Name: RaceManager
   m_TagString: Untagged
@@ -195,8 +196,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15493af1a5ad4f45818107aed06bf36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataParser: {fileID: 0}
+  dataParser: {fileID: 732491690}
   frameDelay: 0.1
+--- !u!114 &732491693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732491687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36b7f9ed6b348574f9b5f6ba2dadf475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPrefab: {fileID: 3417314107678714163, guid: 6c8dfb5c66c63af428940e9fb9aa4071, type: 3}
+  carParentObj: {fileID: 910550519}
+  carBaseMaterial: {fileID: 2100000, guid: 19376e34f542c914abf9ba8704cb7dbd, type: 2}
+--- !u!1 &910550518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910550519}
+  m_Layer: 0
+  m_Name: cars
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910550519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910550518}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1897495933}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921668698
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,6 +534,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1071403752}
+  - {fileID: 910550519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
